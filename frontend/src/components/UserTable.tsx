@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
@@ -22,6 +21,7 @@ const UserTable = () => {
         setLoading(false);
       })
       .catch((err) => {
+        console.error('Failed to fetch users:', err); 
         setError('Failed to load users');
         setLoading(false);
       });
